@@ -20,6 +20,7 @@ function App() {
   return (
     <div
       className={`
+        font-mono text-sm
         h-[100svh] flex flex-col gap-2 justify-center items-center
         ${score % 2 === 1 ? 'bg-green-300' : 'bg-orange-300'}
       `}
@@ -29,8 +30,14 @@ function App() {
       </div>
       <div>
         <button
-          onClick={resetScore}
-          className={`p-1 border-black border-1 rounded-md shadow-md`}
+          onClick={() => {
+            if (score > 0) {
+              resetScore()
+            } else {
+              alert('Not Possible')
+            }
+          }}
+          className={`p-1 border-black border-1 rounded-xl shadow-md`}
         >
           Reset
         </button>
