@@ -20,7 +20,7 @@ const Dice = ({ count, roll, click }) => {
     <div
       className={`
         flex-col place-items-center 
-        py-5 px-3 border-2 rounded-2xl shadow-md
+        py-5 px-3 border-1 rounded-2xl shadow-md
         ${newRoll ? 'bg-gray-300' : 'bg-red-300'}
         ${newRoll ? 'border-black' : 'border-red-900'}
         ${newRoll ? 'text-black' : 'text-red-600'}
